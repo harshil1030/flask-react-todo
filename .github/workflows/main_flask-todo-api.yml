@@ -8,8 +8,6 @@ on:
   push:
     branches:
       - main
-    paths:
-      - "backend/**"  
   workflow_dispatch:
 
 jobs:
@@ -70,9 +68,9 @@ jobs:
       - name: Login to Azure
         uses: azure/login@v2
         with:
-          client-id: ${{ secrets.AZUREAPPSERVICE_CLIENTID_4DB02B00FBEA4C5C84D93887AEFB8BDE }}
-          tenant-id: ${{ secrets.AZUREAPPSERVICE_TENANTID_0127C488E2B344D48B12355A6F5E59F2 }}
-          subscription-id: ${{ secrets.AZUREAPPSERVICE_SUBSCRIPTIONID_C731531CD48649A2937E5EE62C10FA4E }}
+          client-id: ${{ secrets.AZUREAPPSERVICE_CLIENTID_F14D9706526945469C3AFEE9F03F32D9 }}
+          tenant-id: ${{ secrets.AZUREAPPSERVICE_TENANTID_A4549677F11E4253BBBD8327642112AF }}
+          subscription-id: ${{ secrets.AZUREAPPSERVICE_SUBSCRIPTIONID_6833BD721C29426F934FC0700592EA10 }}
 
       - name: 'Deploy to Azure Web App'
         uses: azure/webapps-deploy@v3
